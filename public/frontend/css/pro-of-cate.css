@@ -1,0 +1,104 @@
+.categories {
+    list-style: none;
+    padding-left: 0;
+}
+
+.categories > li {
+    margin-bottom: 5px;
+}
+
+.category-name {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.children {
+    display: none;
+    padding-left: 20px;
+}
+
+.children li {
+    display: grid;
+    margin-bottom: 3px;
+}
+
+.grandchildren {
+    display: none;
+    padding-left: 20px;
+}
+
+.grandchildren li {
+    margin-bottom: 3px;
+}
+
+.category-name:hover {
+    background-color: #cbcbcb;
+}
+
+.category-name.active {
+    background-color: #ffffff;
+}
+
+/* Hiệu ứng sổ xuống */
+.children.active {
+    display: grid;
+}
+
+/* Hiệu ứng sổ sang phải */
+.children.active .grandchildren {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+/*  */
+.icon-toggle::before {
+
+    display: inline-block;
+    width: 20px; /* Điều chỉnh kích thước icon nếu cần */
+    text-align: center;
+}
+
+.category-name.active .icon-toggle::before {
+    
+}
+.cat-mini.active {
+    /* Điều chỉnh các thuộc tính CSS để loại bỏ hiệu ứng xám màu */
+    /* Ví dụ: */
+    background-color: transparent !important;
+    color: #000 !important; /* Điều chỉnh màu chữ về màu mong muốn */
+    /* Các điều chỉnh khác nếu cần thiết */
+
+}         
+.category-name {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Các biểu tượng toggle */
+.category-name .icon-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.category-name.active .icon-toggle {
+    transform: translateY(-50%) rotate(45deg);
+}    
+
+.body-category{
+    border-radius: 10px;
+    border: 2px solid black; 
+}

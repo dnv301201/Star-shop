@@ -1,0 +1,142 @@
+.cart-table-null{
+  height: 400px;
+}
+
+.product_image{
+    width:50px;
+    object-fit: cover;
+}
+.input-group .form-control{
+    width: 20px;
+    padding-left: 25px;
+
+}
+input[type="checkbox"] {
+    transform: scale(2); /* Thay đổi tỷ lệ kích thước, ở đây là gấp đôi */
+  }
+ input[type="checkbox"]:checked  {
+    background-color: black;
+  }
+
+/* Ẩn phần thead khi màn hình thu nhỏ */
+@media screen and (max-width: 768px) {
+    table thead {
+        display: none;
+    }
+
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 10px; 
+    }
+
+
+    table tbody td {
+        display: block;
+        text-align: left; 
+        font-size: 14px; 
+        border: none; 
+        position: relative;
+        padding-left: 50px; 
+        color: #333; 
+    }
+
+
+    table tbody td::before {
+        content: attr(data-label); /* Sử dụng thuộc tính data-label để hiển thị tiêu đề cột */
+        position: absolute;
+        left: 0;
+        width: 50px; 
+        padding-left: 5px; 
+        font-weight: bold; 
+        color: #333; 
+    }
+}
+.fixed-width-td {
+    width: 140px;
+    min-width: 140px;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle; /* căn giữa dọc */
+  }
+
+.cart-table{
+    display: flex;
+    height: auto;
+}
+
+.table-striped th{
+  text-align: center;
+}
+#ProductsInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 100px; 
+}
+
+.product-details {
+  display: flex;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.selected-product-name{
+  width: 60%;
+}
+
+.dat-hang {
+    margin-top: 10px;
+    background-color: black; 
+    color: white;
+    border: 1px solid black; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    margin: 10px 10px;
+  }
+.dat-hang:hover {
+    background-color: gray;
+    color: black;
+}
+
+#total-detail{
+    border-radius: 10px; 
+    border: 1px solid #000; /
+
+}
+
+.selected-product-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .selected-product-image {
+
+    height: auto; 
+    margin-right: 10px; 
+  }
+  
+  .selected-product-name {
+    font-weight: bold; 
+  }
+  
+  .selected-product-price {
+    margin-top: 5px; 
+  }
+  
+  .selected-product-total-price {
+    margin-left: auto;
+    font-weight: bold; 
+  }

@@ -23,7 +23,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' =>'required|email',
-            'password' =>'required'
+            'password' =>'required|min:8'
         ];
     }
     public function messages(): array
@@ -32,6 +32,7 @@ class LoginRequest extends FormRequest
             'email.required' => 'Bạn chưa nhập email.',
             'email.email'=> 'Email phải có dạng ví dụ abc@gmail.com.',
             'password.required' =>'Bạn chưa nhập mật khẩu.',
+            'password.min' =>'Mật khẩu quá ngắn.',
         ];
     }
 }
